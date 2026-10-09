@@ -1,311 +1,79 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Huokaing Thara | Secure Banking & Utility Portal</title>
-
-    <meta name="description"
-          content="Huokaing Thara Banking and Utility Portal featuring QR payments, cinema booking, and a global currency calculator.">
-
-    <meta name="theme-color" content="#063b82">
-
+    <title>Secure Banking & Utility Dashboard | Huokaing Thara</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="bank.jpg" type="image/jpeg">
+    <link rel="icon" href="bank.jpg">
 </head>
-
 <body>
 
-    <!-- Main Navigation -->
+    <!-- Central Logo Banner -->
+    <div class="logo-container" style="display: flex; justify-content: center; align-items: center; text-align: center; width: 100%; margin: 20px 0;">
+        <img src="penetration_testing_announcement2.jpg" alt="Penetration Testing Announcement Logo" class="central-logo" style="display: block; margin: 0 auto;">
+    </div>
+
+    <!-- Navigation Header -->
     <header class="navbar">
-        <a href="./" class="logo-container">
-            <img
-                src="penetration_testing_announcement2.jpg"
-                alt="Huokaing Thara Portal Logo"
-                class="central-logo"
-            >
-
-            <div class="logo-text">
-                <h1
-                    data-en="Huokaing Thara Banking Portal"
-                    data-kh="ប្រព័ន្ធធនាគារ ហួកាំងថារ៉ា"
-                >
-                    Huokaing Thara Banking Portal
-                </h1>
-
-                <p
-                    data-en="Banking & Digital Utilities"
-                    data-kh="ធនាគារ និងសេវាឌីជីថល"
-                >
-                    Banking & Digital Utilities
-                </p>
+        <div class="logo-area">
+            <div class="logo-icon">
+                <img src="penetration_testing_announcement2.jpg" alt="Logo" style="width: 24px; height: 24px; object-fit: contain;">
             </div>
-        </a>
-
-        <button
-            type="button"
-            id="langToggleBtn"
-            class="lang-switch-btn"
-            onclick="toggleLanguage()"
-            aria-label="Switch website language"
-        >
-            ភាសាខ្មែរ / KH
-        </button>
+            <div class="logo-text">
+                <h1 data-km="ការសាកល្បងធ្វើតេស្តប្រព័ន្ធធនាគារ ហួកាំងថារ៉ា ១ & ២" data-en="Penetration Testing Announcement Logo">ការសាកល្បងធ្វើតេស្តប្រព័ន្ធធនាគារ ហួកាំងថារ៉ា ១ & ២</h1>
+                <p id="headerSubtitle">Post-Penetration Testing Verified Release</p>
+            </div>
+        </div>
+        <button id="langToggleBtn" class="lang-switch-btn" onclick="toggleLanguage()">ភាសាខ្មែរ / KH</button>
     </header>
 
-    <main>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner" id="announcementText">
+        🔒 System Security Verified: Penetration testing passed successfully. New customer utilities added below!
+    </div>
 
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="hero-content">
+    <!-- Dashboard Modules Grid -->
+    <main class="dashboard-grid">
+        
+        <!-- Card 1: QR Code Scanner -->
+        <div class="dashboard-card">
+            <a href="https://tharahuokaing.github.io/qr_scanner/">
+                <img src="qr.jpg" alt="QR Scanner Icon" class="card-icon">
+                <h3 data-en="QR Code" data-kh="កូដ QR">QR Code</h3>
+                <p data-en="QR Scanner & Fast Payment Upload" data-kh="ម៉ាស៊ីនស្កេន និងទូទាត់រហ័ស">QR Scanner & Fast Payment Upload</p>
+                <span class="card-link" data-en="Open Module" data-kh="បើកកម្មវិធី">Open Module</span>
+            </a>
+        </div>
 
-                <span class="status-badge">
-                    <span class="status-dot"></span>
-                    SYSTEM SECURITY ANNOUNCEMENT
-                </span>
+        <!-- Card 2: Legend Cinema -->
+        <div class="dashboard-card">
+            <a href="https://tharahuokaing.github.io/cinema/">
+                <img src="cinema.jpg" alt="Cinema Icon" class="card-icon">
+                <h3 data-en="Cinema Booking" data-kh="កក់សំបុត្រកុន">Cinema Booking</h3>
+                <p data-en="Legend Cinema Ticketing & Trailers" data-kh="កក់សំបុត្រ និងទស្សនាវីដេអូ">Legend Cinema Ticketing & Trailers</p>
+                <span class="card-link" data-en="Open Module" data-kh="បើកកម្មវិធី">Open Module</span>
+            </a>
+        </div>
 
-                <h2
-                    data-en="Welcome to Your Digital Banking Portal"
-                    data-kh="សូមស្វាគមន៍មកកាន់ប្រព័ន្ធធនាគារឌីជីថលរបស់អ្នក"
-                >
-                    Welcome to Your Digital Banking Portal
-                </h2>
-
-                <p
-                    data-en="Access convenient digital services from one place, including QR payments, cinema booking, and currency conversion."
-                    data-kh="ប្រើប្រាស់សេវាឌីជីថលយ៉ាងងាយស្រួល រួមមានការទូទាត់ QR ការកក់សំបុត្រកុន និងការប្តូររូបិយប័ណ្ណ។"
-                >
-                    Access convenient digital services from one place,
-                    including QR payments, cinema booking, and currency conversion.
-                </p>
-
-                <a href="#services" class="hero-button">
-                    Explore Services &darr;
-                </a>
-
-            </div>
-
-            <div class="hero-image">
-                <img
-                    src="penetration_testing_announcement2.jpg"
-                    alt="Banking portal security announcement"
-                >
-            </div>
-        </section>
-
-        <!-- Security Announcement -->
-        <section
-            class="announcement-banner"
-            id="announcementText"
-            aria-label="Security announcement"
-        >
-            <span class="announcement-icon" aria-hidden="true">🛡️</span>
-
-            <div>
-                <h3
-                    data-en="Security & System Update"
-                    data-kh="បច្ចុប្បន្នភាពសុវត្ថិភាពប្រព័ន្ធ"
-                >
-                    Security & System Update
-                </h3>
-
-                <p
-                    data-en="Explore our latest customer-focused modules. Refer to the official testing report for verified penetration-testing results."
-                    data-kh="សូមស្វែងយល់ពីកម្មវិធីថ្មីៗសម្រាប់អតិថិជន។ សូមពិនិត្យរបាយការណ៍ផ្លូវការដើម្បីផ្ទៀងផ្ទាត់លទ្ធផលតេស្តសុវត្ថិភាព។"
-                >
-                    Explore our latest customer-focused modules.
-                    Refer to the official testing report for verified
-                    penetration-testing results.
-                </p>
-            </div>
-        </section>
-
-        <!-- Services -->
-        <section class="services-section" id="services">
-
-            <div class="section-heading">
-                <span class="section-eyebrow">DIGITAL SERVICES</span>
-
-                <h2
-                    data-en="Explore Our Modules"
-                    data-kh="ស្វែងយល់ពីសេវាកម្មរបស់យើង"
-                >
-                    Explore Our Modules
-                </h2>
-
-                <p
-                    data-en="Choose a service to get started."
-                    data-kh="ជ្រើសរើសសេវាកម្មដើម្បីចាប់ផ្តើម។"
-                >
-                    Choose a service to get started.
-                </p>
-            </div>
-
-            <div class="dashboard-grid">
-
-                <!-- QR Payment -->
-                <article class="dashboard-card">
-                    <a
-                        href="https://tharahuokaing.github.io/qr_scanner/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div class="card-image-wrapper">
-                            <img
-                                src="qr.jpg"
-                                alt="QR payment scanner"
-                                class="card-icon"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <div class="card-content">
-                            <span class="card-category">PAYMENTS</span>
-
-                            <h3
-                                data-en="QR Code & Payments"
-                                data-kh="កូដ QR និងការទូទាត់"
-                            >
-                                QR Code & Payments
-                            </h3>
-
-                            <p
-                                data-en="Scan QR codes and access payment upload features."
-                                data-kh="ស្កេនកូដ QR និងប្រើមុខងារបង្ហោះព័ត៌មានការទូទាត់។"
-                            >
-                                Scan QR codes and access payment upload features.
-                            </p>
-
-                            <span class="card-link">
-                                Open Module &rarr;
-                            </span>
-                        </div>
-                    </a>
-                </article>
-
-                <!-- Cinema Booking -->
-                <article class="dashboard-card">
-                    <a
-                        href="https://tharahuokaing.github.io/cinema/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div class="card-image-wrapper">
-                            <img
-                                src="cinema.jpg"
-                                alt="Cinema ticket booking"
-                                class="card-icon"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <div class="card-content">
-                            <span class="card-category">ENTERTAINMENT</span>
-
-                            <h3
-                                data-en="Legend Cinema"
-                                data-kh="រោងភាពយន្ត Legend"
-                            >
-                                Legend Cinema
-                            </h3>
-
-                            <p
-                                data-en="Explore cinema ticketing and movie trailer features."
-                                data-kh="ស្វែងរកសេវាកក់សំបុត្រកុន និងទស្សនាវីដេអូភាពយន្ត។"
-                            >
-                                Explore cinema ticketing and movie trailer features.
-                            </p>
-
-                            <span class="card-link">
-                                Open Module &rarr;
-                            </span>
-                        </div>
-                    </a>
-                </article>
-
-                <!-- Currency Calculator -->
-                <article class="dashboard-card">
-                    <a
-                        href="https://tharahuokaing.github.io/calculator/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div class="card-image-wrapper">
-                            <img
-                                src="calculator.jpg"
-                                alt="Currency conversion calculator"
-                                class="card-icon"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <div class="card-content">
-                            <span class="card-category">FINANCIAL TOOLS</span>
-
-                            <h3
-                                data-en="Currency Calculator"
-                                data-kh="ម៉ាស៊ីនគណនាប្តូររូបិយប័ណ្ណ"
-                            >
-                                Currency Calculator
-                            </h3>
-
-                            <p
-                                data-en="Convert currencies and check supported exchange-rate information."
-                                data-kh="ប្តូររូបិយប័ណ្ណ និងពិនិត្យព័ត៌មានអត្រាប្តូរប្រាក់ដែលគាំទ្រ។"
-                            >
-                                Convert currencies and check supported
-                                exchange-rate information.
-                            </p>
-
-                            <span class="card-link">
-                                Open Module &rarr;
-                            </span>
-                        </div>
-                    </a>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Portal Information -->
-        <section class="portal-info">
-            <div>
-                <h2
-                    data-en="One Portal. Multiple Digital Services."
-                    data-kh="ប្រព័ន្ធតែមួយ សេវាឌីជីថលច្រើន"
-                >
-                    One Portal. Multiple Digital Services.
-                </h2>
-
-                <p
-                    data-en="Access the available modules through their respective service pages."
-                    data-kh="ចូលប្រើកម្មវិធីនីមួយៗតាមរយៈទំព័រសេវាកម្មរបស់វា។"
-                >
-                    Access the available modules through their
-                    respective service pages.
-                </p>
-            </div>
-        </section>
+        <!-- Card 3: Global Currency Calculator -->
+        <div class="dashboard-card">
+            <a href="https://tharahuokaing.github.io/calculator/">
+                <img src="calculator.jpg" alt="Calculator Icon" class="card-icon">
+                <h3 data-en="Currency Calculator" data-kh="ម៉ាស៊ីនគណនាប្រាក់">Currency Calculator</h3>
+                <p data-en="Global Exchange Rates & Daily Sync" data-kh="អត្រាប្តូរប្រាក់អន្តរជាតិប្រចាំថ្ងៃ">Global Exchange Rates & Daily Sync</p>
+                <span class="card-link" data-en="Open Module" data-kh="បើកកម្មវិធី">Open Module</span>
+            </a>
+        </div>
 
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <p>
-            &copy; 2026 Huokaing Thara Cybersecurity & Development.
-            All rights reserved.
-        </p>
-
-        <p class="footer-note">
-            Digital services portal
-            <span aria-hidden="true">&bull;</span>
-            Use official service links
-        </p>
+    <footer>
+        <p>&copy; 2026 Huokaing Thara Cybersecurity & Development. All rights reserved.</p>
     </footer>
 
-    <!-- Language and Interface Scripts -->
+    <!-- External JavaScript Link -->
     <script src="script.js"></script>
     <script src="ultra_secure_mode.js"></script>
 </body>
